@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+                
+</head>
+<style>
+.yellow-box{
+    background-color: yellowgreen;
+    padding: 10px;
+}
+</style>
+
+<script type="text/javascript">
+
+function change1() { 
+    
+    document.getElementById("out1").innerHTML = random_place_array1[index1++]; 
+ 
+    index1 %= random_place_array1.length; 
+ 
+} 
+
+
+    
+ 
+function stop1() { 
+ 
+    clearInterval(intervalID1); 
+ 
+} 
+ 
+var random_place_array1 = [95.4, 75.328, 900.012, 1000] 
+
+    intervalID1 = setInterval(change1, 500), 
+
+    index1 = 0;
+
+</script>
+
+<script type="text/javascript">
+function change2() { 
+    
+    document.getElementById("out2").innerHTML = random_place_array2[index2++]; 
+ 
+    index2 %= random_place_array2.length; 
+ 
+} 
+function stop2() { 
+ 
+ clearInterval(intervalID2); 
+
+} 
+
+var random_place_array2 = [9.4, 5.328, 9.012, 10]    
+    intervalID2 = setInterval(change2, 500),
+    index2 = 0;
+</script>
+
+
+<div class="yellow-box">
+<p>RMS Voltage:</p>
+<div id="out1"></div><br> 
+<p>RMS Current:</p>
+<div id="out2"></div><br> 
+<button onclick="stop1();">Stop1</button>
+<button onclick="stop2();">Stop2</button>
+<button onclick="setInterval(change1,500)">start1</button>
+</div>
