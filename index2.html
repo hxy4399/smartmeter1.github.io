@@ -6,8 +6,26 @@
 </head>
 <style>
 .yellow-box{
-    background-color: yellowgreen;
+    
+    width: 250px;
+    height: 187px;
     padding: 10px;
+    
+}
+.yellow-text{
+    color: rgb(255, 255, 2)
+}
+.to-right{
+    margin-left: 150px;
+}
+.border-box{
+    font-size: 12px;
+    border-radius: 15%;
+    background-color: rgba(214, 14, 14, 0.753);
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    
 }
 </style>
 
@@ -30,9 +48,17 @@ function stop1() {
  
 } 
  
-var random_place_array1 = [95.4, 75.328, 900.012, 1000] 
+var random_place_array1 = ['1岁<br>大家都一样',
+                           '9岁<br>劳动委员', 
+                           '13岁<br>蓝色大众小单车',
+                           '16岁<br>95班的班长',
+                           '17岁<br>放假提前回家',
+                           '19岁<br>中财自主招生',
+                           '21岁<br>大二小记', 
+                           '23岁<br>波士顿龙虾',
+                           '25岁<br>天河区精彩生活'] 
 
-    intervalID1 = setInterval(change1, 500), 
+    intervalID1 = setInterval(change1, 150), 
 
     index1 = 0;
 
@@ -52,18 +78,31 @@ function stop2() {
 
 } 
 
-var random_place_array2 = [9.4, 5.328, 9.012, 10]    
-    intervalID2 = setInterval(change2, 500),
+var random_place_array2 = ['福如东海<br>寿比南山',
+                           '万寿无疆<br>身体健康',
+                           '生日快乐<br>天天开心',
+                           '这是凑数的<br>快刷新吧',
+                           '百年好合<br>早生贵子',
+                           '好好学习<br>天天向上',
+                           '新年快乐<br>中秋团圆',
+                           '还有啥祝福啊<br>脑壳疼',
+                           '写文案啥的<br>最讨厌了',
+                           '一切顺利！<br>超级大基友~']    
+    intervalID2 = setInterval(change2, 120),
     index2 = 0;
 </script>
 
 
-<div class="yellow-box">
-<p>RMS Voltage:</p>
-<div id="out1"></div><p>V</p><br> 
-<p>RMS Current:</p>
-<div id="out2"></div><p>A</p><br> 
-<button onclick="stop1();">Stop1</button>
-<button onclick="stop2();">Stop2</button>
-<button onclick="setInterval(change1,500)">start1</button>
+<div class="yellow-box"
+   style="background:url('Img/background.jpg');background-size: 100% 100%;">
+
+<div class="border-box yellow-text to-right">如何成为冯总:
+<div id="out1"></div></div>
+<br>
+<div class="border-box yellow-text to-right">祝 冯博小朋友:
+<div id="out2"></div></div>
+<br>
+<button class="to-right" onclick="stop1();">手气</button>
+<button onclick="stop2();">不错</button>
+
 </div>
